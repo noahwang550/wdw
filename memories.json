@@ -1,0 +1,66 @@
+[
+  {
+    "file": "MEMORY.md",
+    "title": "🌸 长期知识库",
+    "date": "持续更新",
+    "tags": ["核心方法论", "资源索引", "技术栈", "内部工具"],
+    "preview": "核心认知与重要记忆的沉淀之地，包含 AI 工具使用原则、Skills 核心认知、多智能体协作原则等...",
+    "content": "# MEMORY.md - 长期知识库\n\n核心认知与重要记忆的沉淀之地\n\n## 🎯 核心方法论\n\n### AI 工具使用原则\n收藏≠会用。选 1 个最需要的场景，手动完整走一遍流程，理解每一步在做什么，记录自己的 SOP，然后再考虑自动化。\n知道了是知识，会用了才是能力。\n\n### Skills 核心认知\nSkills 一定是你本身实践过或者沉淀好的工作流，只是把它自动化。不是让 AI 帮你从零发明流程，而是把你已经验证过的流程固化下来。\n\n### 多智能体协作原则\n- 专业分工 - 每个 Agent 专注擅长领域\n- 协作规范 - 明确委派、汇报、可靠性协议\n- 过程透明 - 中间过程可见，非黑盒\n\n## 📚 重要资源索引\n\n### Skills 资源站\n- skills.sh - 精选 Skills，支持 16+ 种 AI 工具\n- Anthropic 官方：github.com/anthropics/skills\n- 卡兹克三件套：github.com/KKKKhazix/Khazix-Skills\n\n### 核心开源项目\n- Clawith - OpenClaw 团队版\n- Agency Agents - 55 个 AI 专家团队配置\n- Agent Reach - AI 网络访问脚手架\n\n## 🛠️ 技术栈偏好\n\n### 已验证的工具组合\n- 网页提取：Jina Reader → Scrapling → web_fetch 三级降级\n- 视频字幕：yt-dlp (148K Star，支持 1800+ 站点)\n- AI 视频：Seedance 2.0 (即梦)\n- 文档处理：Claude Skills\n\n### 提示词工程原则\n- 动作写慢、写连续\n- 运镜写稳、写简单\n- 必加稳定/不变形/不僵硬\n- 画质 + 风格最后补\n- 不写剧烈、复杂、多人\n\n## 🛠️ 内部工具\n\n### Task Board (任务看板) - 飞书多维表格\n位置：https://my.feishu.cn/base/Hk7ubaYzLaA3eMs5DOLc499YnAe\n用途：Noah 和 Aerith 的任务协作追踪系统\n\n## ⚠️ 风险提醒\n\n### 账号安全\n- 使用 Cookie 登录的平台存在封号风险\n- 务必使用专用小号\n\n### API 限制\n- Jina Reader: 200 次/天免费配额\n- 微信公众号：需要验证码"
+  },
+  {
+    "file": "2026-03-25.md",
+    "title": "📊 Task Board Created",
+    "date": "2026-03-25",
+    "tags": ["任务管理", "工具开发"],
+    "preview": "Built a task tracking board for Noah and Aerith to collaborate on tasks. Features 3 columns, task assignment...",
+    "content": "# 2026-03-25\n\n## Task Board Created\n\nBuilt a task tracking board for Noah and Aerith to collaborate on tasks.\n\n### What Was Built\n\n**Location**: `/root/.openclaw/workspace-feishu-assistant/task-board/`\n\n**Files Created**:\n- `app.html` - Beautiful standalone React app\n- `index.html` - Simple version\n- `convex/schema.ts` - Database schema\n- `convex/tasks.ts` - Backend functions\n- `README.md` - Setup instructions\n\n### Features\n\n- 3 Columns: To Do, In Progress, Done\n- Task Assignment: Noah 👤 or Aerith 🌸\n- Real-time Stats\n- Responsive Design\n- Auto-save with localStorage\n\n### How to Use\n\n```bash\nopen /root/.openclaw/workspace-feishu-assistant/task-board/app.html\n```\n\nThis opens a fully functional task board in the browser."
+  },
+  {
+    "file": "2026-03-19.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-19",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 19 日的记忆记录...",
+    "content": "# 2026-03-19\n\n日常记忆记录..."
+  },
+  {
+    "file": "2026-03-18.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-18",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 18 日的记忆记录...",
+    "content": "# 2026-03-18\n\n日常记忆记录..."
+  },
+  {
+    "file": "2026-03-16.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-16",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 16 日的记忆记录...",
+    "content": "# 2026-03-16\n\n日常记忆记录..."
+  },
+  {
+    "file": "2026-03-14.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-14",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 14 日的记忆记录...",
+    "content": "# 2026-03-14\n\n日常记忆记录..."
+  },
+  {
+    "file": "2026-03-13.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-13",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 13 日的记忆记录...",
+    "content": "# 2026-03-13\n\n日常记忆记录..."
+  },
+  {
+    "file": "2026-03-12.md",
+    "title": "📝 日常记忆",
+    "date": "2026-03-12",
+    "tags": ["日常记录"],
+    "preview": "2026 年 3 月 12 日的记忆记录...",
+    "content": "# 2026-03-12\n\n日常记忆记录..."
+  }
+]
