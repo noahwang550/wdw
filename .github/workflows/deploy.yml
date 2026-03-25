@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+      
+      - name: Build static site
+        run: |
+          # Generate memories.json from markdown files
+          python3 << 'EOF'
+          import json
+          import os
+          from pathlib import Path
+          from datetime import datetime
+          
+          memory_dir = Path('memory')
+          main_memory = Path('MEMORY.md')
+          memories = []
+          
+          # Load main MEMORY.md
+          if main_memory.exists():
+              content = main_memory.read_text(encoding='utf-8')
+              memories.append({
+                  'file': 'MEMORY.md',
+                  'title': '🌸 长期知识库',
+                  'date': '持续更新',
+                  'tags': ['核心方法论', '资源索引', '技术栈', '内部工具'],
+                  'preview': content[:200].replace('\n', ' ') + '...',
+                  'content': content[:10000]
+              })
+          
+          # Load daily memories
+          for file in sorted(memory_dir.glob('*.md'), reverse=True):
+              if file.name.startswith('2026-'):
+                  content = file.read_text(encoding='utf-8')
+                  date = file.stem
+                  memories.append({
+                      'file': file.name,
+                      'title': f'📝 {date}',
+                      'date': date,
+                      'tags': ['日常记录', '记忆'],
+                      'preview': content[:200].replace('\n', ' ') + '...',
+                      'content': content[:10000]
+                  })
+          
+          # Save to JSON
+          with open('memories.json', 'w', encoding='utf-8') as f:
+              json.dump(memories, f, ensure_ascii=False, indent=2)
+          
+          print(f'Generated memories.json with {len(memories)} memories')
+          EOF
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./memory-screen
+          keep_files: true
