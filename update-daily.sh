@@ -26,8 +26,8 @@ echo ""
 # 检查记忆文件是否存在
 if [ ! -f "${MEMORY_FILE}" ]; then
     echo "⚠️ 未找到记忆文件：${MEMORY_FILE}"
-    echo "💬 发送通知到群聊..."
-    # 这里可以调用飞书 API 发送通知
+    echo "💬 发送通知到群聊（无记忆文件）..."
+    # crons 系统会自动处理通知
     echo "跳过今日更新"
     exit 0
 fi
@@ -83,10 +83,6 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
     echo "✅ 记忆看板更新完成！"
     echo "🌐 访问：https://noahwang550.github.io/wdw/"
     echo ""
-    
-    # 发送成功通知到群聊（可选）
-    echo "💬 发送成功通知到群聊：${GROUP_CHAT_ID}"
-    # 这里可以调用飞书 API 发送通知
     
 else
     echo ""
